@@ -32,7 +32,7 @@ async def resume(client: Client, message: Message):
 
 
 @Client.on_message(
-    filters.command(["stop", "end"])
+    filters.command(["stopvc", "end"])
     & filters.group
     & ~ filters.edited
 )
@@ -71,7 +71,7 @@ async def skip(client: Client, message: Message):
 
 
 @Client.on_message(
-    filters.command("admincache")
+    filters.command("adminscache")
 )
 @errors
 @admins_only
